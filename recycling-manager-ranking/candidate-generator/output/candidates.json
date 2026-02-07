@@ -1,0 +1,1594 @@
+[
+  {
+    "id": 1,
+    "name": "Clark Ritchie",
+    "email": "clark.ritchie@hotmail.com",
+    "phone": "1-843-226-7112 x036",
+    "age": 43,
+    "location": "Ann Arbor, TN",
+    "experience": 21,
+    "skills": "OSHA Compliance, Change Management, Sustainability Reporting, Creativity, Strategic Planning",
+    "education": "Master's Degree",
+    "certifications": [
+      "Professional Engineer (PE)",
+      "Certified Recycling Professional"
+    ],
+    "industries": [
+      "Paper & Pulp"
+    ],
+    "industry_experience": {
+      "Paper & Pulp": 20
+    },
+    "languages": [
+      "English",
+      "German"
+    ],
+    "salary_expectation": "$78847",
+    "availability": "1 month",
+    "current_role": "District Marketing Producer at Huels, Ortiz and Jaskolski",
+    "achievements": [
+      "Reduced waste by 28% in previous role",
+      "Improved team productivity by 33%",
+      "Implemented cost-saving measures saving $249181 annually"
+    ],
+    "sql_insert": {
+      "name": "Clark Ritchie",
+      "experience": 21,
+      "skills": "Robotics, Change Management, Recycling Technologies, Presentation Skills, Inventory Control"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Esmeralda Hauck",
+    "email": "esmeralda_hauck@yahoo.com",
+    "phone": "1-810-291-0972 x0414",
+    "age": 45,
+    "location": "Pine Bluff, NE",
+    "experience": 23,
+    "skills": "Statistics, Conflict Resolution, Green Manufacturing, Creativity, Carbon Footprint, Multitasking, Cross-functional Collaboration, Safety Protocols",
+    "education": "Bachelor's Degree",
+    "certifications": [
+      "ISO 14001 Lead Auditor",
+      "LEED Green Associate"
+    ],
+    "industries": [
+      "Chemical Processing",
+      "Waste Management"
+    ],
+    "industry_experience": {
+      "Chemical Processing": 21,
+      "Waste Management": 20
+    },
+    "languages": [
+      "Spanish",
+      "Mandarin",
+      "English"
+    ],
+    "salary_expectation": "$96835",
+    "availability": "3 months",
+    "current_role": "Dynamic Operations Orchestrator at Farrell LLC",
+    "achievements": [
+      "Reduced waste by 35% in previous role",
+      "Improved team productivity by 20%",
+      "Implemented cost-saving measures saving $197360 annually"
+    ],
+    "sql_insert": {
+      "name": "Esmeralda Hauck",
+      "experience": 23,
+      "skills": "Process Optimization, Performance Management, Life Cycle Assessment, Multitasking, Conflict Resolution"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Melany Mann-Gleason",
+    "email": "melany.mann-gleason23@gmail.com",
+    "phone": "857-311-0029 x155",
+    "age": 27,
+    "location": "Lake Zola, TX",
+    "experience": 5,
+    "skills": "ISO 14001, Strategic Planning, Environmental Auditing, Mentoring, Automation, Environmental Compliance, Multitasking",
+    "education": "MBA",
+    "certifications": [
+      "Six Sigma Black Belt",
+      "PMP",
+      "ISO 14001 Lead Auditor"
+    ],
+    "industries": [
+      "Manufacturing",
+      "Textile",
+      "Environmental Services"
+    ],
+    "industry_experience": {
+      "Manufacturing": 4,
+      "Textile": 3,
+      "Environmental Services": 5
+    },
+    "languages": [
+      "English",
+      "Mandarin",
+      "German"
+    ],
+    "salary_expectation": "$142406",
+    "availability": "Immediate",
+    "current_role": "Corporate Creative Administrator at Senger, Rolfson and Mosciski",
+    "achievements": [
+      "Reduced waste by 10% in previous role",
+      "Improved team productivity by 15%",
+      "Implemented cost-saving measures saving $92569 annually"
+    ],
+    "sql_insert": {
+      "name": "Melany Mann-Gleason",
+      "experience": 5,
+      "skills": "Robotics, Time Management, Energy Efficiency, Adaptability, Reporting, Training & Development, Regulatory Compliance, Performance Management"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Friedrich Bogan",
+    "email": "friedrich.bogan89@gmail.com",
+    "phone": "694-523-8378 x37444",
+    "age": 25,
+    "location": "East Myrtischester, GA",
+    "experience": 3,
+    "skills": "Equipment Operation, Budget Management, Energy Efficiency, Customer Service, Renewable Energy, Resource Allocation",
+    "education": "Master's Degree",
+    "certifications": [],
+    "industries": [
+      "Automotive",
+      "Environmental Services"
+    ],
+    "industry_experience": {
+      "Automotive": 2,
+      "Environmental Services": 1
+    },
+    "languages": [
+      "English",
+      "French",
+      "Spanish"
+    ],
+    "salary_expectation": "$83910",
+    "availability": "3 months",
+    "current_role": "Future Assurance Architect at Spinka - West",
+    "achievements": [
+      "Reduced waste by 23% in previous role",
+      "Improved team productivity by 15%",
+      "Implemented cost-saving measures saving $113259 annually"
+    ],
+    "sql_insert": {
+      "name": "Friedrich Bogan",
+      "experience": 3,
+      "skills": "ERP Systems, Budget Management, Energy Efficiency, Critical Thinking, Life Cycle Assessment, Team Leadership, Reporting, Strategic Planning, Time Management, Carbon Footprint"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Jaylin Stroman",
+    "email": "jaylin_stroman@gmail.com",
+    "phone": "1-747-421-8539",
+    "age": 42,
+    "location": "New Geoffreystad, AK",
+    "experience": 20,
+    "skills": "Inventory Control, Change Management, Life Cycle Assessment, Creativity, Sustainability Reporting, Customer Service, Renewable Energy, Team Leadership",
+    "education": "Master's Degree",
+    "certifications": [
+      "Certified Manager (CM)",
+      "LEED Green Associate"
+    ],
+    "industries": [
+      "Chemical Processing"
+    ],
+    "industry_experience": {
+      "Chemical Processing": 13
+    },
+    "languages": [
+      "Spanish",
+      "Mandarin"
+    ],
+    "salary_expectation": "$87318",
+    "availability": "Immediate",
+    "current_role": "Direct Operations Analyst at Erdman, Howe and Murray",
+    "achievements": [
+      "Reduced waste by 34% in previous role",
+      "Improved team productivity by 35%",
+      "Implemented cost-saving measures saving $113104 annually"
+    ],
+    "sql_insert": {
+      "name": "Jaylin Stroman",
+      "experience": 20,
+      "skills": "Quality Control, Team Leadership, Circular Economy, Multitasking, Reporting"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Miller Leannon",
+    "email": "miller_leannon99@gmail.com",
+    "phone": "790.774.0372 x443",
+    "age": 26,
+    "location": "Fort Denishaven, AZ",
+    "experience": 4,
+    "skills": "Warehouse Management, Reporting, Waste Reduction, Customer Service, Recycling Technologies",
+    "education": "PhD",
+    "certifications": [
+      "Certified Recycling Professional",
+      "OSHA 30-hour"
+    ],
+    "industries": [
+      "Metals",
+      "Logistics"
+    ],
+    "industry_experience": {
+      "Metals": 1,
+      "Logistics": 4
+    },
+    "languages": [
+      "German"
+    ],
+    "salary_expectation": "$117977",
+    "availability": "1 month",
+    "current_role": "Regional Operations Designer at Prohaska LLC",
+    "achievements": [
+      "Reduced waste by 10% in previous role",
+      "Improved team productivity by 23%",
+      "Implemented cost-saving measures saving $174803 annually"
+    ],
+    "sql_insert": {
+      "name": "Miller Leannon",
+      "experience": 4,
+      "skills": "Safety Protocols, Performance Management, Renewable Energy, Critical Thinking, Multitasking, ERP Systems, Recycling Technologies"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Sedrick Douglas",
+    "email": "sedrick_douglas@gmail.com",
+    "phone": "(997) 574-0560",
+    "age": 41,
+    "location": "Dorotheaview, RI",
+    "experience": 19,
+    "skills": "OSHA Compliance, Performance Management, Energy Efficiency, Customer Service, Creativity, Change Management, Communication Skills, Team Leadership, Decision Making",
+    "education": "MBA",
+    "certifications": [],
+    "industries": [
+      "Paper & Pulp"
+    ],
+    "industry_experience": {
+      "Paper & Pulp": 19
+    },
+    "languages": [
+      "German",
+      "Mandarin",
+      "English"
+    ],
+    "salary_expectation": "$80610",
+    "availability": "2 weeks",
+    "current_role": "International Research Officer at Ziemann - Marvin",
+    "achievements": [
+      "Reduced waste by 15% in previous role",
+      "Improved team productivity by 19%",
+      "Implemented cost-saving measures saving $102978 annually"
+    ],
+    "sql_insert": {
+      "name": "Sedrick Douglas",
+      "experience": 19,
+      "skills": "Python, Change Management, Renewable Energy, Presentation Skills, Communication Skills"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Blake Cole",
+    "email": "blake_cole@yahoo.com",
+    "phone": "377-699-9828 x20322",
+    "age": 41,
+    "location": "Round Rock, MD",
+    "experience": 19,
+    "skills": "Six Sigma, Risk Management, Life Cycle Assessment, Team Building, Team Leadership",
+    "education": "Bachelor's Degree",
+    "certifications": [
+      "Six Sigma Green Belt",
+      "Professional Engineer (PE)",
+      "PMP"
+    ],
+    "industries": [
+      "Plastics",
+      "Chemical Processing"
+    ],
+    "industry_experience": {
+      "Plastics": 19,
+      "Chemical Processing": 5
+    },
+    "languages": [
+      "Mandarin",
+      "French"
+    ],
+    "salary_expectation": "$91390",
+    "availability": "2 weeks",
+    "current_role": "Lead Operations Facilitator at Ortiz, Homenick and Hauck",
+    "achievements": [
+      "Reduced waste by 22% in previous role",
+      "Improved team productivity by 20%",
+      "Implemented cost-saving measures saving $170896 annually"
+    ],
+    "sql_insert": {
+      "name": "Blake Cole",
+      "experience": 19,
+      "skills": "Logistics, Communication Skills, Waste Reduction, Team Building, Negotiation, Attention to Detail, Risk Management, Safety Protocols, Automation"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Winfield Kemmer",
+    "email": "winfield.kemmer@hotmail.com",
+    "phone": "548.935.0777 x221",
+    "age": 38,
+    "location": "West Colin, NH",
+    "experience": 16,
+    "skills": "Logistics, Communication Skills, Sustainability Reporting, Presentation Skills, Mentoring, Conflict Resolution, Safety Protocols, Environmental Auditing",
+    "education": "Associate Degree",
+    "certifications": [],
+    "industries": [
+      "Automotive"
+    ],
+    "industry_experience": {
+      "Automotive": 1
+    },
+    "languages": [
+      "Spanish",
+      "French",
+      "German"
+    ],
+    "salary_expectation": "$94285",
+    "availability": "2 weeks",
+    "current_role": "Regional Identity Representative at Cole, Reilly and Grant",
+    "achievements": [
+      "Reduced waste by 16% in previous role",
+      "Improved team productivity by 19%",
+      "Implemented cost-saving measures saving $183623 annually"
+    ],
+    "sql_insert": {
+      "name": "Winfield Kemmer",
+      "experience": 16,
+      "skills": "Supply Chain Management, Performance Management, Life Cycle Assessment, Customer Service, Carbon Footprint"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Layne Larkin",
+    "email": "layne.larkin90@hotmail.com",
+    "phone": "788-969-7881 x551",
+    "age": 32,
+    "location": "New Nasir, TN",
+    "experience": 10,
+    "skills": "Data Analysis, Strategic Planning, Life Cycle Assessment, Customer Service, Lean Manufacturing, Budget Management, Adaptability, Cross-functional Collaboration, Decision Making",
+    "education": "PhD",
+    "certifications": [
+      "Certified Recycling Professional"
+    ],
+    "industries": [
+      "Chemical Processing"
+    ],
+    "industry_experience": {
+      "Chemical Processing": 3
+    },
+    "languages": [
+      "Spanish"
+    ],
+    "salary_expectation": "$110391",
+    "availability": "1 month",
+    "current_role": "Lead Security Developer at Mayert, Lynch and Bergstrom",
+    "achievements": [
+      "Reduced waste by 34% in previous role",
+      "Improved team productivity by 33%",
+      "Implemented cost-saving measures saving $132789 annually"
+    ],
+    "sql_insert": {
+      "name": "Layne Larkin",
+      "experience": 10,
+      "skills": "Statistics, Budget Management, Waste Reduction, Negotiation, Strategic Planning, Reporting, Change Management, Lean Manufacturing, Stakeholder Management, Cross-functional Collaboration"
+    }
+  },
+  {
+    "id": 11,
+    "name": "Alena Reinger",
+    "email": "alena.reinger@hotmail.com",
+    "phone": "(769) 923-3470",
+    "age": 37,
+    "location": "Benedictfield, CA",
+    "experience": 15,
+    "skills": "Quality Control, Strategic Planning, Environmental Compliance, Customer Service, Cross-functional Collaboration, Environmental Auditing, Waste Reduction, Training & Development, Presentation Skills",
+    "education": "Bachelor's Degree",
+    "certifications": [
+      "Six Sigma Black Belt",
+      "OSHA 30-hour",
+      "LEED Green Associate"
+    ],
+    "industries": [
+      "Paper & Pulp",
+      "Manufacturing"
+    ],
+    "industry_experience": {
+      "Paper & Pulp": 10,
+      "Manufacturing": 1
+    },
+    "languages": [
+      "Spanish",
+      "German"
+    ],
+    "salary_expectation": "$123142",
+    "availability": "1 month",
+    "current_role": "Customer Communications Orchestrator at Nikolaus - Jast",
+    "achievements": [
+      "Reduced waste by 32% in previous role",
+      "Improved team productivity by 18%",
+      "Implemented cost-saving measures saving $99381 annually"
+    ],
+    "sql_insert": {
+      "name": "Alena Reinger",
+      "experience": 15,
+      "skills": "Warehouse Management, Strategic Planning, Carbon Footprint, Cross-functional Collaboration, PLC Programming"
+    }
+  },
+  {
+    "id": 12,
+    "name": "Elnora Osinski",
+    "email": "elnora.osinski@yahoo.com",
+    "phone": "(880) 909-3939 x3082",
+    "age": 43,
+    "location": "Schmidtstad, MS",
+    "experience": 21,
+    "skills": "Supply Chain Management, Communication Skills, Renewable Energy, Cross-functional Collaboration, Environmental Auditing, Regulatory Compliance, Time Management, Safety Protocols",
+    "education": "Bachelor's Degree",
+    "certifications": [
+      "OSHA 30-hour"
+    ],
+    "industries": [
+      "Recycling",
+      "Waste Management",
+      "Textile",
+      "Automotive"
+    ],
+    "industry_experience": {
+      "Recycling": 21,
+      "Waste Management": 19,
+      "Textile": 11,
+      "Automotive": 3
+    },
+    "languages": [
+      "English",
+      "German"
+    ],
+    "salary_expectation": "$110925",
+    "availability": "3 months",
+    "current_role": "District Response Developer at Muller - Schuster",
+    "achievements": [
+      "Reduced waste by 33% in previous role",
+      "Improved team productivity by 33%",
+      "Implemented cost-saving measures saving $237114 annually"
+    ],
+    "sql_insert": {
+      "name": "Elnora Osinski",
+      "experience": 21,
+      "skills": "Maintenance Management, Project Management, Energy Efficiency, Cross-functional Collaboration, Training & Development, Team Building"
+    }
+  },
+  {
+    "id": 13,
+    "name": "Augustine Cronin",
+    "email": "augustine.cronin18@hotmail.com",
+    "phone": "620-305-3168 x97978",
+    "age": 44,
+    "location": "Port Alleneview, VT",
+    "experience": 22,
+    "skills": "Safety Protocols, Stakeholder Management, Life Cycle Assessment, Mentoring, Sustainability Reporting, Logistics, Python, Equipment Operation, Decision Making, Critical Thinking",
+    "education": "High School Diploma",
+    "certifications": [
+      "ISO 14001 Lead Auditor",
+      "Professional Engineer (PE)",
+      "Certified Manager (CM)"
+    ],
+    "industries": [
+      "Recycling"
+    ],
+    "industry_experience": {
+      "Recycling": 15
+    },
+    "languages": [
+      "English"
+    ],
+    "salary_expectation": "$85878",
+    "availability": "1 month",
+    "current_role": "Product Branding Engineer at McKenzie, Gorczany and Wiegand",
+    "achievements": [
+      "Reduced waste by 40% in previous role",
+      "Improved team productivity by 19%",
+      "Implemented cost-saving measures saving $140236 annually"
+    ],
+    "sql_insert": {
+      "name": "Augustine Cronin",
+      "experience": 22,
+      "skills": "Quality Control, Change Management, Circular Economy, Customer Service, Process Optimization, Carbon Footprint, Sustainability Reporting, Maintenance Management, Training & Development, Supply Chain Management"
+    }
+  },
+  {
+    "id": 14,
+    "name": "Marlene Grant",
+    "email": "marlene_grant@hotmail.com",
+    "phone": "720.331.4283 x367",
+    "age": 35,
+    "location": "Jonesboro, VT",
+    "experience": 13,
+    "skills": "Supply Chain Management, Team Leadership, Renewable Energy, Critical Thinking, Python, Troubleshooting, OSHA Compliance, Robotics, Safety Protocols",
+    "education": "Master's Degree",
+    "certifications": [
+      "PMP",
+      "Certified Recycling Professional",
+      "Six Sigma Green Belt"
+    ],
+    "industries": [
+      "Electronics Recycling",
+      "Manufacturing",
+      "Construction"
+    ],
+    "industry_experience": {
+      "Electronics Recycling": 6,
+      "Manufacturing": 6,
+      "Construction": 6
+    },
+    "languages": [
+      "Mandarin"
+    ],
+    "salary_expectation": "$133071",
+    "availability": "2 weeks",
+    "current_role": "Chief Accounts Director at Ebert - Crist",
+    "achievements": [
+      "Reduced waste by 29% in previous role",
+      "Improved team productivity by 33%",
+      "Implemented cost-saving measures saving $53069 annually"
+    ],
+    "sql_insert": {
+      "name": "Marlene Grant",
+      "experience": 13,
+      "skills": "Lean Manufacturing, Conflict Resolution, Environmental Auditing, Customer Service, Stakeholder Management, Training & Development, Cross-functional Collaboration, Problem Solving, Risk Management"
+    }
+  },
+  {
+    "id": 15,
+    "name": "Raegan Conroy",
+    "email": "raegan.conroy33@yahoo.com",
+    "phone": "897.586.0006 x5897",
+    "age": 45,
+    "location": "Midwest City, GA",
+    "experience": 23,
+    "skills": "Automation, Decision Making, Recycling Technologies, Mentoring, Time Management, Python, Inventory Control, Waste Reduction",
+    "education": "PhD",
+    "certifications": [
+      "Six Sigma Green Belt"
+    ],
+    "industries": [
+      "Electronics Recycling"
+    ],
+    "industry_experience": {
+      "Electronics Recycling": 7
+    },
+    "languages": [
+      "English",
+      "German",
+      "French"
+    ],
+    "salary_expectation": "$122650",
+    "availability": "Immediate",
+    "current_role": "Future Optimization Strategist at Gorczany Inc",
+    "achievements": [
+      "Reduced waste by 28% in previous role",
+      "Improved team productivity by 16%",
+      "Implemented cost-saving measures saving $227061 annually"
+    ],
+    "sql_insert": {
+      "name": "Raegan Conroy",
+      "experience": 23,
+      "skills": "Python, Team Leadership, Sustainability Reporting, Critical Thinking, Six Sigma"
+    }
+  },
+  {
+    "id": 16,
+    "name": "Reuben Olson",
+    "email": "reuben_olson@gmail.com",
+    "phone": "576.458.2918",
+    "age": 37,
+    "location": "Jerelmouth, AK",
+    "experience": 15,
+    "skills": "ERP Systems, Time Management, Energy Efficiency, Customer Service, Team Leadership",
+    "education": "Bachelor's Degree",
+    "certifications": [
+      "Six Sigma Green Belt",
+      "Certified Recycling Professional",
+      "LEED Green Associate"
+    ],
+    "industries": [
+      "Plastics"
+    ],
+    "industry_experience": {
+      "Plastics": 2
+    },
+    "languages": [
+      "Mandarin"
+    ],
+    "salary_expectation": "$142826",
+    "availability": "Immediate",
+    "current_role": "Human Markets Consultant at Parisian and Sons",
+    "achievements": [
+      "Reduced waste by 39% in previous role",
+      "Improved team productivity by 31%",
+      "Implemented cost-saving measures saving $205922 annually"
+    ],
+    "sql_insert": {
+      "name": "Reuben Olson",
+      "experience": 15,
+      "skills": "Troubleshooting, Risk Management, Sustainability Reporting, Presentation Skills, Quality Control, Robotics, Six Sigma, Environmental Compliance, Change Management"
+    }
+  },
+  {
+    "id": 17,
+    "name": "Jolie McDermott",
+    "email": "jolie_mcdermott@hotmail.com",
+    "phone": "(498) 418-2277 x8031",
+    "age": 26,
+    "location": "Annamarieville, LA",
+    "experience": 4,
+    "skills": "Maintenance Management, Budget Management, Regulatory Compliance, Cross-functional Collaboration, Customer Service, Presentation Skills, Strategic Planning, Lean Manufacturing, Training & Development",
+    "education": "High School Diploma",
+    "certifications": [],
+    "industries": [
+      "Metals",
+      "Pharmaceutical",
+      "Automotive"
+    ],
+    "industry_experience": {
+      "Metals": 3,
+      "Pharmaceutical": 3,
+      "Automotive": 2
+    },
+    "languages": [
+      "French",
+      "English"
+    ],
+    "salary_expectation": "$100274",
+    "availability": "1 month",
+    "current_role": "Legacy Assurance Agent at Nikolaus - Johnson",
+    "achievements": [
+      "Reduced waste by 20% in previous role",
+      "Improved team productivity by 34%",
+      "Implemented cost-saving measures saving $213358 annually"
+    ],
+    "sql_insert": {
+      "name": "Jolie McDermott",
+      "experience": 4,
+      "skills": "Troubleshooting, Strategic Planning, Energy Efficiency, Mentoring, Green Manufacturing"
+    }
+  },
+  {
+    "id": 18,
+    "name": "Franco Ryan-Pagac",
+    "email": "franco_ryan-pagac5@gmail.com",
+    "phone": "1-613-886-0264 x97193",
+    "age": 34,
+    "location": "Lake Violette, OR",
+    "experience": 12,
+    "skills": "Supply Chain Management, Training & Development, Environmental Auditing, Negotiation, Equipment Operation",
+    "education": "MBA",
+    "certifications": [
+      "Six Sigma Black Belt",
+      "Certified Manager (CM)"
+    ],
+    "industries": [
+      "Construction",
+      "Textile"
+    ],
+    "industry_experience": {
+      "Construction": 11,
+      "Textile": 12
+    },
+    "languages": [
+      "English"
+    ],
+    "salary_expectation": "$103309",
+    "availability": "3 months",
+    "current_role": "Regional Interactions Representative at Waelchi Inc",
+    "achievements": [
+      "Reduced waste by 31% in previous role",
+      "Improved team productivity by 16%",
+      "Implemented cost-saving measures saving $217161 annually"
+    ],
+    "sql_insert": {
+      "name": "Franco Ryan-Pagac",
+      "experience": 12,
+      "skills": "Warehouse Management, Change Management, Renewable Energy, Critical Thinking, Sustainability Reporting, ERP Systems, Supply Chain Management, Team Leadership, Attention to Detail"
+    }
+  },
+  {
+    "id": 19,
+    "name": "Alvera Koch",
+    "email": "alvera.koch55@yahoo.com",
+    "phone": "1-355-263-4139 x255",
+    "age": 33,
+    "location": "Lake Isommouth, OH",
+    "experience": 11,
+    "skills": "Safety Protocols, Change Management, Renewable Energy, Adaptability, Statistics, Regulatory Compliance, Problem Solving, ISO 9001, Waste Reduction",
+    "education": "PhD",
+    "certifications": [
+      "Certified Recycling Professional",
+      "Certified Manager (CM)",
+      "ISO 14001 Lead Auditor"
+    ],
+    "industries": [
+      "Logistics",
+      "Textile",
+      "Pharmaceutical",
+      "Metals"
+    ],
+    "industry_experience": {
+      "Logistics": 6,
+      "Textile": 9,
+      "Pharmaceutical": 3,
+      "Metals": 2
+    },
+    "languages": [
+      "Mandarin",
+      "German"
+    ],
+    "salary_expectation": "$70156",
+    "availability": "Immediate",
+    "current_role": "Investor Brand Strategist at Schmeler - Smith",
+    "achievements": [
+      "Reduced waste by 10% in previous role",
+      "Improved team productivity by 21%",
+      "Implemented cost-saving measures saving $93520 annually"
+    ],
+    "sql_insert": {
+      "name": "Alvera Koch",
+      "experience": 11,
+      "skills": "ERP Systems, Resource Allocation, Green Manufacturing, Cross-functional Collaboration, Supply Chain Management, Budget Management, Robotics"
+    }
+  },
+  {
+    "id": 20,
+    "name": "Emilia Strosin",
+    "email": "emilia_strosin@gmail.com",
+    "phone": "540.634.2182 x697",
+    "age": 37,
+    "location": "Lake Katelinberg, WY",
+    "experience": 15,
+    "skills": "Data Analysis, Reporting, Life Cycle Assessment, Critical Thinking, Change Management, Resource Allocation, Renewable Energy, Budget Management",
+    "education": "Associate Degree",
+    "certifications": [
+      "ISO 14001 Lead Auditor"
+    ],
+    "industries": [
+      "Electronics Recycling",
+      "Recycling",
+      "Metals"
+    ],
+    "industry_experience": {
+      "Electronics Recycling": 15,
+      "Recycling": 11,
+      "Metals": 8
+    },
+    "languages": [
+      "German",
+      "French",
+      "Mandarin"
+    ],
+    "salary_expectation": "$95020",
+    "availability": "2 weeks",
+    "current_role": "Product Solutions Representative at Abshire - Bogan",
+    "achievements": [
+      "Reduced waste by 30% in previous role",
+      "Improved team productivity by 17%",
+      "Implemented cost-saving measures saving $153432 annually"
+    ],
+    "sql_insert": {
+      "name": "Emilia Strosin",
+      "experience": 15,
+      "skills": "ERP Systems, Performance Management, Carbon Footprint, Cross-functional Collaboration, Logistics, Statistics"
+    }
+  },
+  {
+    "id": 21,
+    "name": "Heaven Strosin",
+    "email": "heaven.strosin@yahoo.com",
+    "phone": "1-847-268-4963 x00621",
+    "age": 34,
+    "location": "Joshville, UT",
+    "experience": 12,
+    "skills": "Robotics, Risk Management, Regulatory Compliance, Critical Thinking, PLC Programming, Environmental Auditing, Performance Management, Life Cycle Assessment, ERP Systems",
+    "education": "High School Diploma",
+    "certifications": [
+      "Certified Safety Professional",
+      "PMP",
+      "Certified Manager (CM)"
+    ],
+    "industries": [
+      "Manufacturing",
+      "Recycling"
+    ],
+    "industry_experience": {
+      "Manufacturing": 5,
+      "Recycling": 10
+    },
+    "languages": [
+      "German"
+    ],
+    "salary_expectation": "$76107",
+    "availability": "Immediate",
+    "current_role": "International Accounts Liaison at Hirthe Group",
+    "achievements": [
+      "Reduced waste by 15% in previous role",
+      "Improved team productivity by 27%",
+      "Implemented cost-saving measures saving $235032 annually"
+    ],
+    "sql_insert": {
+      "name": "Heaven Strosin",
+      "experience": 12,
+      "skills": "Statistics, Conflict Resolution, Green Manufacturing, Team Building, Logistics"
+    }
+  },
+  {
+    "id": 22,
+    "name": "Jaron Toy",
+    "email": "jaron_toy93@hotmail.com",
+    "phone": "1-964-538-7001 x53980",
+    "age": 46,
+    "location": "East Derekton, OH",
+    "experience": 24,
+    "skills": "Inventory Control, Time Management, Energy Efficiency, Multitasking, Mentoring, Risk Management, Budget Management",
+    "education": "MBA",
+    "certifications": [],
+    "industries": [
+      "Recycling",
+      "Chemical Processing",
+      "Environmental Services"
+    ],
+    "industry_experience": {
+      "Recycling": 24,
+      "Chemical Processing": 20,
+      "Environmental Services": 3
+    },
+    "languages": [
+      "Mandarin",
+      "Spanish",
+      "French"
+    ],
+    "salary_expectation": "$106414",
+    "availability": "Immediate",
+    "current_role": "Corporate Functionality Producer at Kiehn LLC",
+    "achievements": [
+      "Reduced waste by 21% in previous role",
+      "Improved team productivity by 15%",
+      "Implemented cost-saving measures saving $194354 annually"
+    ],
+    "sql_insert": {
+      "name": "Jaron Toy",
+      "experience": 24,
+      "skills": "Inventory Control, Stakeholder Management, Environmental Auditing, Creativity, ISO 9001, Critical Thinking, Presentation Skills, Warehouse Management, Reporting, Automation"
+    }
+  },
+  {
+    "id": 23,
+    "name": "Alex Labadie",
+    "email": "alex_labadie7@gmail.com",
+    "phone": "698.799.8760 x052",
+    "age": 43,
+    "location": "Bernhardboro, KS",
+    "experience": 21,
+    "skills": "Robotics, Change Management, Waste Reduction, Team Building, Green Manufacturing, Regulatory Compliance",
+    "education": "PhD",
+    "certifications": [
+      "Certified Manager (CM)",
+      "ISO 14001 Lead Auditor",
+      "PMP"
+    ],
+    "industries": [
+      "Construction",
+      "Recycling",
+      "Metals"
+    ],
+    "industry_experience": {
+      "Construction": 1,
+      "Recycling": 21,
+      "Metals": 18
+    },
+    "languages": [
+      "French",
+      "Mandarin"
+    ],
+    "salary_expectation": "$140503",
+    "availability": "Immediate",
+    "current_role": "Direct Research Director at Marvin, Brekke and Wyman",
+    "achievements": [
+      "Reduced waste by 23% in previous role",
+      "Improved team productivity by 21%",
+      "Implemented cost-saving measures saving $133306 annually"
+    ],
+    "sql_insert": {
+      "name": "Alex Labadie",
+      "experience": 21,
+      "skills": "ISO 14001, Decision Making, Recycling Technologies, Mentoring, Python, Cross-functional Collaboration, Team Building"
+    }
+  },
+  {
+    "id": 24,
+    "name": "Maverick Mertz",
+    "email": "maverick.mertz20@yahoo.com",
+    "phone": "1-641-928-7114",
+    "age": 42,
+    "location": "Grimesfurt, GA",
+    "experience": 20,
+    "skills": "ERP Systems, Risk Management, Renewable Energy, Customer Service, Performance Management, Green Manufacturing, ISO 9001",
+    "education": "High School Diploma",
+    "certifications": [
+      "Certified Manager (CM)"
+    ],
+    "industries": [
+      "Recycling",
+      "Electronics Recycling",
+      "Food Processing",
+      "Waste Management"
+    ],
+    "industry_experience": {
+      "Recycling": 2,
+      "Electronics Recycling": 9,
+      "Food Processing": 9,
+      "Waste Management": 11
+    },
+    "languages": [
+      "German"
+    ],
+    "salary_expectation": "$132441",
+    "availability": "3 months",
+    "current_role": "Product Quality Producer at Schultz - Streich",
+    "achievements": [
+      "Reduced waste by 25% in previous role",
+      "Improved team productivity by 15%",
+      "Implemented cost-saving measures saving $105690 annually"
+    ],
+    "sql_insert": {
+      "name": "Maverick Mertz",
+      "experience": 20,
+      "skills": "Six Sigma, Team Leadership, Carbon Footprint, Mentoring, Supply Chain Management"
+    }
+  },
+  {
+    "id": 25,
+    "name": "Anais Wiza",
+    "email": "anais.wiza@hotmail.com",
+    "phone": "(994) 683-2047",
+    "age": 32,
+    "location": "Lake Elmorestad, KY",
+    "experience": 10,
+    "skills": "Safety Protocols, Stakeholder Management, Life Cycle Assessment, Multitasking, ERP Systems, Team Leadership, Adaptability, Budget Management",
+    "education": "MBA",
+    "certifications": [
+      "OSHA 30-hour",
+      "PMP",
+      "Certified Safety Professional"
+    ],
+    "industries": [
+      "Paper & Pulp"
+    ],
+    "industry_experience": {
+      "Paper & Pulp": 10
+    },
+    "languages": [
+      "Mandarin",
+      "German",
+      "English"
+    ],
+    "salary_expectation": "$119955",
+    "availability": "2 weeks",
+    "current_role": "Central Directives Coordinator at Schoen - Nienow",
+    "achievements": [
+      "Reduced waste by 11% in previous role",
+      "Improved team productivity by 28%",
+      "Implemented cost-saving measures saving $184386 annually"
+    ],
+    "sql_insert": {
+      "name": "Anais Wiza",
+      "experience": 10,
+      "skills": "ISO 9001, Reporting, Environmental Auditing, Problem Solving, Maintenance Management"
+    }
+  },
+  {
+    "id": 26,
+    "name": "Porter Zulauf",
+    "email": "porter_zulauf@yahoo.com",
+    "phone": "(268) 446-9654 x3040",
+    "age": 41,
+    "location": "New Jude, KS",
+    "experience": 19,
+    "skills": "Inventory Control, Strategic Planning, Sustainability Reporting, Team Building, Regulatory Compliance, Green Manufacturing, Stakeholder Management, Critical Thinking",
+    "education": "PhD",
+    "certifications": [
+      "Professional Engineer (PE)",
+      "Certified Recycling Professional",
+      "PMP"
+    ],
+    "industries": [
+      "Pharmaceutical",
+      "Textile",
+      "Automotive"
+    ],
+    "industry_experience": {
+      "Pharmaceutical": 9,
+      "Textile": 4,
+      "Automotive": 1
+    },
+    "languages": [
+      "English"
+    ],
+    "salary_expectation": "$72322",
+    "availability": "2 weeks",
+    "current_role": "Customer Accountability Officer at Von, Franey and Skiles",
+    "achievements": [
+      "Reduced waste by 19% in previous role",
+      "Improved team productivity by 27%",
+      "Implemented cost-saving measures saving $123153 annually"
+    ],
+    "sql_insert": {
+      "name": "Porter Zulauf",
+      "experience": 19,
+      "skills": "Inventory Control, Training & Development, Environmental Compliance, Cross-functional Collaboration, Maintenance Management, Supply Chain Management, Risk Management, Warehouse Management, Environmental Auditing"
+    }
+  },
+  {
+    "id": 27,
+    "name": "Kristopher Lueilwitz",
+    "email": "kristopher.lueilwitz@gmail.com",
+    "phone": "1-891-344-4785 x31717",
+    "age": 36,
+    "location": "Sanfordport, TX",
+    "experience": 14,
+    "skills": "ISO 14001, Performance Management, Regulatory Compliance, Adaptability, Circular Economy, Attention to Detail, Carbon Footprint, Risk Management, Renewable Energy",
+    "education": "MBA",
+    "certifications": [],
+    "industries": [
+      "Logistics"
+    ],
+    "industry_experience": {
+      "Logistics": 7
+    },
+    "languages": [
+      "German"
+    ],
+    "salary_expectation": "$92751",
+    "availability": "1 month",
+    "current_role": "Central Branding Director at Grant - Hansen",
+    "achievements": [
+      "Reduced waste by 39% in previous role",
+      "Improved team productivity by 28%",
+      "Implemented cost-saving measures saving $119732 annually"
+    ],
+    "sql_insert": {
+      "name": "Kristopher Lueilwitz",
+      "experience": 14,
+      "skills": "Data Analysis, Team Leadership, Green Manufacturing, Creativity, Regulatory Compliance, Stakeholder Management"
+    }
+  },
+  {
+    "id": 28,
+    "name": "Gaston Kihn",
+    "email": "gaston.kihn21@gmail.com",
+    "phone": "782.891.2315",
+    "age": 28,
+    "location": "Keonboro, MI",
+    "experience": 6,
+    "skills": "PLC Programming, Performance Management, Environmental Compliance, Critical Thinking, Negotiation, Robotics, Python, Troubleshooting, Communication Skills, ERP Systems",
+    "education": "MBA",
+    "certifications": [
+      "Six Sigma Green Belt"
+    ],
+    "industries": [
+      "Electronics Recycling",
+      "Pharmaceutical"
+    ],
+    "industry_experience": {
+      "Electronics Recycling": 3,
+      "Pharmaceutical": 2
+    },
+    "languages": [
+      "Mandarin",
+      "Spanish",
+      "German"
+    ],
+    "salary_expectation": "$73467",
+    "availability": "3 months",
+    "current_role": "Principal Accountability Director at Reichel Group",
+    "achievements": [
+      "Reduced waste by 16% in previous role",
+      "Improved team productivity by 31%",
+      "Implemented cost-saving measures saving $211682 annually"
+    ],
+    "sql_insert": {
+      "name": "Gaston Kihn",
+      "experience": 6,
+      "skills": "Logistics, Performance Management, Recycling Technologies, Team Building, Training & Development, Cross-functional Collaboration, Inventory Control, Conflict Resolution, Creativity"
+    }
+  },
+  {
+    "id": 29,
+    "name": "Larissa Hoeger",
+    "email": "larissa.hoeger@gmail.com",
+    "phone": "831.531.6717 x2405",
+    "age": 27,
+    "location": "Hilpertstead, ID",
+    "experience": 5,
+    "skills": "Troubleshooting, Budget Management, Recycling Technologies, Presentation Skills, Critical Thinking, Process Optimization",
+    "education": "MBA",
+    "certifications": [
+      "Certified Manager (CM)",
+      "Certified Safety Professional",
+      "Six Sigma Green Belt"
+    ],
+    "industries": [
+      "Logistics",
+      "Construction",
+      "Chemical Processing",
+      "Recycling"
+    ],
+    "industry_experience": {
+      "Logistics": 5,
+      "Construction": 5,
+      "Chemical Processing": 2,
+      "Recycling": 2
+    },
+    "languages": [
+      "German",
+      "Mandarin",
+      "French"
+    ],
+    "salary_expectation": "$97129",
+    "availability": "3 months",
+    "current_role": "Investor Security Manager at Douglas, Hermann and Farrell",
+    "achievements": [
+      "Reduced waste by 21% in previous role",
+      "Improved team productivity by 23%",
+      "Implemented cost-saving measures saving $73327 annually"
+    ],
+    "sql_insert": {
+      "name": "Larissa Hoeger",
+      "experience": 5,
+      "skills": "Data Analysis, Change Management, Renewable Energy, Presentation Skills, Strategic Planning, Team Building, Conflict Resolution, OSHA Compliance"
+    }
+  },
+  {
+    "id": 30,
+    "name": "Connor Cartwright",
+    "email": "connor.cartwright@hotmail.com",
+    "phone": "642-605-5606",
+    "age": 29,
+    "location": "Plymouth, NH",
+    "experience": 7,
+    "skills": "Warehouse Management, Reporting, Energy Efficiency, Mentoring, Strategic Planning, ISO 9001",
+    "education": "MBA",
+    "certifications": [],
+    "industries": [
+      "Logistics"
+    ],
+    "industry_experience": {
+      "Logistics": 5
+    },
+    "languages": [
+      "Spanish",
+      "English",
+      "Mandarin"
+    ],
+    "salary_expectation": "$102402",
+    "availability": "3 months",
+    "current_role": "Senior Quality Director at Stehr - Mueller",
+    "achievements": [
+      "Reduced waste by 22% in previous role",
+      "Improved team productivity by 17%",
+      "Implemented cost-saving measures saving $203510 annually"
+    ],
+    "sql_insert": {
+      "name": "Connor Cartwright",
+      "experience": 7,
+      "skills": "Python, Performance Management, Environmental Auditing, Adaptability, Robotics, Risk Management"
+    }
+  },
+  {
+    "id": 31,
+    "name": "Catalina Dooley",
+    "email": "catalina_dooley80@hotmail.com",
+    "phone": "(307) 528-5189 x76516",
+    "age": 25,
+    "location": "Fort Wayne, RI",
+    "experience": 3,
+    "skills": "Supply Chain Management, Decision Making, Green Manufacturing, Creativity, Team Leadership, Critical Thinking, Customer Service, Performance Management",
+    "education": "High School Diploma",
+    "certifications": [
+      "Professional Engineer (PE)",
+      "OSHA 30-hour",
+      "Six Sigma Black Belt"
+    ],
+    "industries": [
+      "Chemical Processing",
+      "Waste Management"
+    ],
+    "industry_experience": {
+      "Chemical Processing": 3,
+      "Waste Management": 3
+    },
+    "languages": [
+      "German",
+      "Spanish",
+      "French"
+    ],
+    "salary_expectation": "$122680",
+    "availability": "Immediate",
+    "current_role": "District Accounts Developer at Volkman - Miller",
+    "achievements": [
+      "Reduced waste by 26% in previous role",
+      "Improved team productivity by 26%",
+      "Implemented cost-saving measures saving $244377 annually"
+    ],
+    "sql_insert": {
+      "name": "Catalina Dooley",
+      "experience": 3,
+      "skills": "ERP Systems, Risk Management, Life Cycle Assessment, Negotiation, Green Manufacturing, Team Leadership, Budget Management, Maintenance Management"
+    }
+  },
+  {
+    "id": 32,
+    "name": "Consuelo Leannon",
+    "email": "consuelo_leannon@gmail.com",
+    "phone": "634-774-4643 x4964",
+    "age": 28,
+    "location": "North Kelvin, NC",
+    "experience": 6,
+    "skills": "Automation, Strategic Planning, Energy Efficiency, Team Building, Reporting, Data Analysis",
+    "education": "Associate Degree",
+    "certifications": [
+      "Six Sigma Black Belt",
+      "ISO 14001 Lead Auditor",
+      "Certified Recycling Professional"
+    ],
+    "industries": [
+      "Pharmaceutical",
+      "Logistics",
+      "Metals"
+    ],
+    "industry_experience": {
+      "Pharmaceutical": 6,
+      "Logistics": 1,
+      "Metals": 4
+    },
+    "languages": [
+      "English",
+      "German",
+      "Mandarin"
+    ],
+    "salary_expectation": "$110387",
+    "availability": "Immediate",
+    "current_role": "International Division Specialist at Hayes LLC",
+    "achievements": [
+      "Reduced waste by 40% in previous role",
+      "Improved team productivity by 35%",
+      "Implemented cost-saving measures saving $159846 annually"
+    ],
+    "sql_insert": {
+      "name": "Consuelo Leannon",
+      "experience": 6,
+      "skills": "Process Optimization, Time Management, Recycling Technologies, Team Building, Communication Skills, Lean Manufacturing, Python, Reporting, Safety Protocols, Budget Management"
+    }
+  },
+  {
+    "id": 33,
+    "name": "Dedric Kling",
+    "email": "dedric.kling16@gmail.com",
+    "phone": "1-866-632-2461 x157",
+    "age": 27,
+    "location": "North Emilia, MS",
+    "experience": 5,
+    "skills": "Six Sigma, Training & Development, Recycling Technologies, Negotiation, Mentoring, ERP Systems, Carbon Footprint, Automation",
+    "education": "High School Diploma",
+    "certifications": [
+      "Six Sigma Green Belt"
+    ],
+    "industries": [
+      "Manufacturing",
+      "Automotive",
+      "Paper & Pulp"
+    ],
+    "industry_experience": {
+      "Manufacturing": 4,
+      "Automotive": 1,
+      "Paper & Pulp": 5
+    },
+    "languages": [
+      "Spanish"
+    ],
+    "salary_expectation": "$80932",
+    "availability": "Immediate",
+    "current_role": "Lead Solutions Technician at Gislason, Corwin and Metz",
+    "achievements": [
+      "Reduced waste by 36% in previous role",
+      "Improved team productivity by 20%",
+      "Implemented cost-saving measures saving $58556 annually"
+    ],
+    "sql_insert": {
+      "name": "Dedric Kling",
+      "experience": 5,
+      "skills": "Warehouse Management, Change Management, Green Manufacturing, Multitasking, Environmental Auditing"
+    }
+  },
+  {
+    "id": 34,
+    "name": "Shanelle Brekke",
+    "email": "shanelle_brekke@hotmail.com",
+    "phone": "807-652-8686",
+    "age": 43,
+    "location": "Prosaccobury, TX",
+    "experience": 21,
+    "skills": "Automation, Stakeholder Management, Energy Efficiency, Cross-functional Collaboration, Negotiation, Robotics, PLC Programming, Reporting, Circular Economy, Presentation Skills",
+    "education": "Associate Degree",
+    "certifications": [
+      "Certified Manager (CM)"
+    ],
+    "industries": [
+      "Paper & Pulp"
+    ],
+    "industry_experience": {
+      "Paper & Pulp": 15
+    },
+    "languages": [
+      "German",
+      "Mandarin",
+      "Spanish"
+    ],
+    "salary_expectation": "$138707",
+    "availability": "Immediate",
+    "current_role": "Corporate Paradigm Assistant at Orn, Kovacek and Swift",
+    "achievements": [
+      "Reduced waste by 32% in previous role",
+      "Improved team productivity by 31%",
+      "Implemented cost-saving measures saving $243250 annually"
+    ],
+    "sql_insert": {
+      "name": "Shanelle Brekke",
+      "experience": 21,
+      "skills": "Data Analysis, Communication Skills, Circular Economy, Negotiation, Robotics, Risk Management, Warehouse Management, Change Management"
+    }
+  },
+  {
+    "id": 35,
+    "name": "Sydni Balistreri",
+    "email": "sydni.balistreri@hotmail.com",
+    "phone": "804-744-0425",
+    "age": 44,
+    "location": "New Elsaville, MA",
+    "experience": 22,
+    "skills": "Data Analysis, Conflict Resolution, Renewable Energy, Negotiation, Adaptability, Team Building, Performance Management",
+    "education": "PhD",
+    "certifications": [],
+    "industries": [
+      "Construction",
+      "Logistics",
+      "Waste Management"
+    ],
+    "industry_experience": {
+      "Construction": 1,
+      "Logistics": 7,
+      "Waste Management": 4
+    },
+    "languages": [
+      "French"
+    ],
+    "salary_expectation": "$108837",
+    "availability": "Immediate",
+    "current_role": "Future Configuration Coordinator at Renner - Kuhic",
+    "achievements": [
+      "Reduced waste by 12% in previous role",
+      "Improved team productivity by 15%",
+      "Implemented cost-saving measures saving $78080 annually"
+    ],
+    "sql_insert": {
+      "name": "Sydni Balistreri",
+      "experience": 22,
+      "skills": "Process Optimization, Performance Management, Environmental Compliance, Negotiation, Budget Management, Data Analysis, Logistics, PLC Programming, Six Sigma"
+    }
+  },
+  {
+    "id": 36,
+    "name": "Shanny Predovic",
+    "email": "shanny_predovic65@yahoo.com",
+    "phone": "1-999-524-2385 x7033",
+    "age": 38,
+    "location": "Tustin, CT",
+    "experience": 16,
+    "skills": "Statistics, Decision Making, Recycling Technologies, Multitasking, Strategic Planning, ISO 14001, Renewable Energy",
+    "education": "Bachelor's Degree",
+    "certifications": [],
+    "industries": [
+      "Paper & Pulp",
+      "Recycling",
+      "Manufacturing",
+      "Environmental Services"
+    ],
+    "industry_experience": {
+      "Paper & Pulp": 11,
+      "Recycling": 13,
+      "Manufacturing": 12,
+      "Environmental Services": 9
+    },
+    "languages": [
+      "Spanish"
+    ],
+    "salary_expectation": "$132837",
+    "availability": "3 months",
+    "current_role": "Lead Markets Coordinator at McGlynn - Wisoky",
+    "achievements": [
+      "Reduced waste by 20% in previous role",
+      "Improved team productivity by 33%",
+      "Implemented cost-saving measures saving $243408 annually"
+    ],
+    "sql_insert": {
+      "name": "Shanny Predovic",
+      "experience": 16,
+      "skills": "Process Optimization, Project Management, Environmental Compliance, Problem Solving, Communication Skills, Adaptability, Training & Development, Waste Reduction, Mentoring"
+    }
+  },
+  {
+    "id": 37,
+    "name": "Hubert Weimann",
+    "email": "hubert_weimann@hotmail.com",
+    "phone": "525-281-7550",
+    "age": 34,
+    "location": "New Ianborough, SC",
+    "experience": 12,
+    "skills": "Troubleshooting, Communication Skills, Sustainability Reporting, Negotiation, Quality Control, Process Optimization",
+    "education": "Master's Degree",
+    "certifications": [],
+    "industries": [
+      "Textile"
+    ],
+    "industry_experience": {
+      "Textile": 11
+    },
+    "languages": [
+      "German",
+      "French"
+    ],
+    "salary_expectation": "$87178",
+    "availability": "3 months",
+    "current_role": "Legacy Assurance Strategist at Ruecker Group",
+    "achievements": [
+      "Reduced waste by 37% in previous role",
+      "Improved team productivity by 15%",
+      "Implemented cost-saving measures saving $144344 annually"
+    ],
+    "sql_insert": {
+      "name": "Hubert Weimann",
+      "experience": 12,
+      "skills": "Maintenance Management, Communication Skills, Waste Reduction, Problem Solving, Negotiation, Environmental Auditing"
+    }
+  },
+  {
+    "id": 38,
+    "name": "Myrtis Hodkiewicz",
+    "email": "myrtis.hodkiewicz60@hotmail.com",
+    "phone": "303-879-4482 x30563",
+    "age": 41,
+    "location": "New Britain, IL",
+    "experience": 19,
+    "skills": "Quality Control, Communication Skills, Recycling Technologies, Adaptability, Cross-functional Collaboration",
+    "education": "PhD",
+    "certifications": [
+      "OSHA 30-hour",
+      "PMP",
+      "Six Sigma Green Belt"
+    ],
+    "industries": [
+      "Construction",
+      "Environmental Services"
+    ],
+    "industry_experience": {
+      "Construction": 19,
+      "Environmental Services": 5
+    },
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "salary_expectation": "$142434",
+    "availability": "1 month",
+    "current_role": "National Quality Facilitator at Maggio and Sons",
+    "achievements": [
+      "Reduced waste by 39% in previous role",
+      "Improved team productivity by 35%",
+      "Implemented cost-saving measures saving $158539 annually"
+    ],
+    "sql_insert": {
+      "name": "Myrtis Hodkiewicz",
+      "experience": 19,
+      "skills": "Statistics, Performance Management, Carbon Footprint, Creativity, Cross-functional Collaboration, Life Cycle Assessment, Recycling Technologies, Resource Allocation, Problem Solving, Attention to Detail"
+    }
+  },
+  {
+    "id": 39,
+    "name": "Edwardo Schaden",
+    "email": "edwardo_schaden60@gmail.com",
+    "phone": "897.749.7342",
+    "age": 28,
+    "location": "Marquardtberg, NJ",
+    "experience": 6,
+    "skills": "ERP Systems, Strategic Planning, Waste Reduction, Negotiation, ISO 14001, Quality Control, Process Optimization, Environmental Compliance",
+    "education": "Master's Degree",
+    "certifications": [],
+    "industries": [
+      "Pharmaceutical"
+    ],
+    "industry_experience": {
+      "Pharmaceutical": 5
+    },
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "salary_expectation": "$108787",
+    "availability": "Immediate",
+    "current_role": "Internal Program Engineer at Schowalter LLC",
+    "achievements": [
+      "Reduced waste by 28% in previous role",
+      "Improved team productivity by 22%",
+      "Implemented cost-saving measures saving $133661 annually"
+    ],
+    "sql_insert": {
+      "name": "Edwardo Schaden",
+      "experience": 6,
+      "skills": "Warehouse Management, Budget Management, Waste Reduction, Cross-functional Collaboration, Environmental Auditing, Reporting"
+    }
+  },
+  {
+    "id": 40,
+    "name": "Chris Turcotte",
+    "email": "chris.turcotte35@yahoo.com",
+    "phone": "(958) 540-3216 x93959",
+    "age": 31,
+    "location": "Lake Markuston, MD",
+    "experience": 9,
+    "skills": "Statistics, Risk Management, Environmental Auditing, Problem Solving, Energy Efficiency, Customer Service, PLC Programming, Renewable Energy, Supply Chain Management",
+    "education": "PhD",
+    "certifications": [
+      "Certified Recycling Professional",
+      "ISO 14001 Lead Auditor",
+      "LEED Green Associate"
+    ],
+    "industries": [
+      "Automotive",
+      "Pharmaceutical",
+      "Chemical Processing"
+    ],
+    "industry_experience": {
+      "Automotive": 8,
+      "Pharmaceutical": 5,
+      "Chemical Processing": 3
+    },
+    "languages": [
+      "English",
+      "French",
+      "Mandarin"
+    ],
+    "salary_expectation": "$132986",
+    "availability": "2 weeks",
+    "current_role": "Central Metrics Technician at Kreiger - Macejkovic",
+    "achievements": [
+      "Reduced waste by 37% in previous role",
+      "Improved team productivity by 16%",
+      "Implemented cost-saving measures saving $50306 annually"
+    ],
+    "sql_insert": {
+      "name": "Chris Turcotte",
+      "experience": 9,
+      "skills": "Robotics, Change Management, Waste Reduction, Multitasking, ISO 9001, Six Sigma, Performance Management, ISO 14001, Conflict Resolution, Communication Skills"
+    }
+  }
+]

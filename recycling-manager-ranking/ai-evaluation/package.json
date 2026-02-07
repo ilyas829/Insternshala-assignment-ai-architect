@@ -1,0 +1,16 @@
+{
+  "name": "ai-evaluation",
+  "version": "1.0.0",
+  "description": "AI-powered evaluation system for recycling manager candidates",
+  "main": "database-integration.js",
+  "scripts": {
+    "test": "node test-evaluation.js",
+    "integrate": "node database-integration.js"
+  },
+  "dependencies": {
+    "sqlite3": "^5.1.6"
+  },
+  "keywords": ["ai", "evaluation", "candidates"],
+  "author": "",
+  "license": "MIT"
+}

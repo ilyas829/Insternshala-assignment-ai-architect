@@ -1,0 +1,17 @@
+{
+  "name": "candidate-generator",
+  "version": "1.0.0",
+  "description": "Generate realistic candidate profiles for recycling manager positions",
+  "type": "module",
+  "main": "generate-candidates.js",
+  "scripts": {
+    "generate": "node generate-candidates.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^8.4.0"
+  },
+  "keywords": ["candidate", "generator", "faker", "recruitment"],
+  "author": "Your Name",
+  "license": "MIT"
+}
