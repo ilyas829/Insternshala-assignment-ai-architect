@@ -1,0 +1,53 @@
+{
+  "candidate": {
+    "id": 1,
+    "name": "Alex Chen",
+    "experience": 8,
+    "skills": "Lean Manufacturing, Six Sigma, ERP Systems, Team Leadership",
+    "industry": "Manufacturing",
+    "education": "Master's Degree",
+    "management_experience": 4
+  },
+  "evaluations": {
+    "crisis_management": {
+      "score": 7.2,
+      "strengths": [
+        "Quick decision making",
+        "Calm under pressure",
+        "Problem solving",
+        "Leadership experience",
+        "Risk management skills"
+      ],
+      "evaluation_type": "crisis_management",
+      "timestamp": "2026-02-06T13:29:51.375Z"
+    },
+    "sustainability": {
+      "score": 10,
+      "knowledge_areas": [
+        "Environmental compliance",
+        "Waste reduction",
+        "Circular economy",
+        "Energy efficiency",
+        "Carbon footprint management",
+        "ISO standards"
+      ],
+      "evaluation_type": "sustainability",
+      "timestamp": "2026-02-06T13:29:51.492Z"
+    },
+    "team_motivation": {
+      "score": 9.2,
+      "leadership_qualities": [
+        "Empathy",
+        "Communication",
+        "Delegation",
+        "Mentoring ability",
+        "Conflict resolution",
+        "Team building"
+      ],
+      "evaluation_type": "team_motivation",
+      "timestamp": "2026-02-06T13:29:51.602Z"
+    }
+  },
+  "total_score": 8.68,
+  "evaluated_at": "2026-02-06T13:29:51.612Z"
+}

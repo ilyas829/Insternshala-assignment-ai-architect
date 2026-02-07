@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>♻️ Recycling Manager Ranking System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0d9488;
+            --secondary: #059669;
+            --crisis: #f97316;
+            --sustainability: #22c55e;
+            --team: #3b82f6;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary) !important;
+        }
+        
+        .stat-card {
+            transition: all 0.3s ease;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .candidate-card {
+            transition: all 0.3s ease;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .candidate-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+        
+        .skill-bar {
+            height: 24px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .crisis-bg { background-color: var(--crisis); }
+        .sustainability-bg { background-color: var(--sustainability); }
+        .team-bg { background-color: var(--team); }
+        
+        .avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .rank-badge {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .rank-1 { background: linear-gradient(135deg, #FFD700, #FFA500); }
+        .rank-2 { background: linear-gradient(135deg, #C0C0C0, #A9A9A9); }
+        .rank-3 { background: linear-gradient(135deg, #CD7F32, #8B4513); }
+        .rank-other { background: linear-gradient(135deg, var(--primary), var(--secondary)); }
+        
+        .tab-content {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 10px;
+        }
+        
+        .nav-tabs .nav-link.active {
+            background: var(--primary);
+            color: white;
+            border-radius: 8px 8px 0 0;
+            font-weight: 600;
+        }
+        
+        .nav-tabs .nav-link {
+            color: #64748b;
+            font-weight: 500;
+            border: none;
+            margin-right: 5px;
+        }
+        
+        .btn-recycling {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border: none;
+            color: white;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-recycling:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(13, 148, 136, 0.3);
+            color: white;
+        }
+        
+        .api-status {
+            font-size: 0.8rem;
+            padding: 2px 8px;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-recycle me-2"></i>Recycling Manager Ranking
+            </a>
+            <div class="d-flex align-items-center">
+                <span id="api-status-badge" class="badge bg-secondary api-status me-3">
+                    <i class="fas fa-circle me-1"></i>Checking API...
+                </span>
+                <span class="badge bg-light text-dark me-3">
+                    <i class="fas fa-calendar-alt me-2"></i>
+                    <span id="current-date">Loading...</span>
+                </span>
+                <button class="btn btn-recycling" onclick="runAIEvaluation()">
+                    <i class="fas fa-robot me-2"></i>Run AI Evaluation
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container my-4">
+        <!-- Header Stats -->
+        <div class="row mb-4">
+            <div class="col-md-3 mb-3">
+                <div class="stat-card bg-white p-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="text-muted mb-2">Total Candidates</h6>
+                            <h2 class="mb-0" id="total-candidates">40</h2>
+                        </div>
+                        <div class="avatar">
+                            <i class="fas fa-users"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3 mb-3">
+                <div class="stat-card bg-white p-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="text-muted mb-2">Average Score</h6>
+                            <h2 class="mb-0" id="avg-score">8.2</h2>
+                        </div>
+                        <div class="avatar" style="background: linear-gradient(135deg, #f97316, #f59e0b);">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3 mb-3">
+                <div class="stat-card bg-white p-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="text-muted mb-2">Top Score</h6>
+                            <h2 class="mb-0" id="top-score">9.2</h2>
+                        </div>
+                        <div class="avatar" style="background: linear-gradient(135deg, #22c55e, #16a34a);">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-3 mb-3">
+                <div class="stat-card bg-white p-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h6 class="text-muted mb-2">Avg Experience</h6>
+                            <h2 class="mb-0" id="avg-experience">9.5y</h2>
+                        </div>
+                        <div class="avatar" style="background: linear-gradient(135deg, #3b82f6, #2563eb);">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="row">
+            <!-- Left Column (8 columns) -->
+            <div class="col-lg-8 mb-4">
+                <!-- Tabs -->
+                <ul class="nav nav-tabs" id="dashboardTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="leaderboard-tab" data-bs-toggle="tab" data-bs-target="#leaderboard" type="button">
+                            <i class="fas fa-trophy me-2"></i>Leaderboard
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="analytics-tab" data-bs-toggle="tab" data-bs-target="#analytics" type="button">
+                            <i class="fas fa-chart-bar me-2"></i>Analytics
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="candidates-tab" data-bs-toggle="tab" data-bs-target="#candidates" type="button">
+                            <i class="fas fa-users me-2"></i>Candidates
+                        </button>
+                    </li>
+                </ul>
+                
+                <div class="tab-content">
+                    <!-- Leaderboard Tab -->
+                    <div class="tab-pane fade show active" id="leaderboard" role="tabpanel">
+                        <h4 class="mb-4"><i class="fas fa-trophy me-2"></i>Top 10 Candidates</h4>
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th width="80">Rank</th>
+                                        <th>Candidate</th>
+                                        <th width="120">Score</th>
+                                        <th width="120">Experience</th>
+                                        <th width="200">Skills</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="leaderboard-body">
+                                    <!-- Filled by JavaScript -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <!-- Analytics Tab -->
+                    <div class="tab-pane fade" id="analytics" role="tabpanel">
+                        <h4 class="mb-4"><i class="fas fa-chart-bar me-2"></i>Skill Analytics</h4>
+                        
+                        <!-- Score Distribution -->
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <div class="card border-0 shadow-sm mb-3">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Score Distribution</h6>
+                                        <canvas id="scoreChart" height="200"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card border-0 shadow-sm mb-3">
+                                    <div class="card-body">
+                                        <h6 class="card-title">Skill Composition</h6>
+                                        <canvas id="skillChart" height="200"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Skill Heatmap -->
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <h6 class="card-title mb-3">Skill Heatmap</h6>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <h6 class="text-center mb-3"><i class="fas fa-fire text-warning me-2"></i>Crisis Management</h6>
+                                        <div class="skill-bar mb-2">
+                                            <div class="crisis-bg" style="width: 85%"></div>
+                                        </div>
+                                        <p class="text-center mb-0">Average: <strong>8.5/10</strong></p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h6 class="text-center mb-3"><i class="fas fa-leaf text-success me-2"></i>Sustainability</h6>
+                                        <div class="skill-bar mb-2">
+                                            <div class="sustainability-bg" style="width: 78%"></div>
+                                        </div>
+                                        <p class="text-center mb-0">Average: <strong>7.8/10</strong></p>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <h6 class="text-center mb-3"><i class="fas fa-users text-primary me-2"></i>Team Motivation</h6>
+                                        <div class="skill-bar mb-2">
+                                            <div class="team-bg" style="width: 82%"></div>
+                                        </div>
+                                        <p class="text-center mb-0">Average: <strong>8.2/10</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Candidates Tab -->
+                    <div class="tab-pane fade" id="candidates" role="tabpanel">
+                        <h4 class="mb-4"><i class="fas fa-users me-2"></i>All Candidates</h4>
+                        <div class="row" id="candidates-grid">
+                            <!-- Filled by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Column (4 columns) -->
+            <div class="col-lg-4">
+                <!-- Top Performer -->
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-crown text-warning me-2"></i>Top Performer</h5>
+                        <div class="text-center mb-3">
+                            <div class="rank-badge rank-1 mx-auto mb-3">1</div>
+                            <h4 id="top-performer-name">Maria Rodriguez</h4>
+                            <p class="text-muted mb-2">12 years experience</p>
+                            <div class="badge bg-success fs-6 mb-3" id="top-performer-score">9.2/10</div>
+                        </div>
+                        <div class="mb-2">
+                            <small>Crisis Management</small>
+                            <div class="skill-bar mb-2">
+                                <div class="crisis-bg" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <small>Sustainability</small>
+                            <div class="skill-bar mb-2">
+                                <div class="sustainability-bg" style="width: 83%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <small>Team Motivation</small>
+                            <div class="skill-bar mb-2">
+                                <div class="team-bg" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <p class="mb-0"><strong>Skills:</strong> <span id="top-performer-skills">Leadership, Process Optimization</span></p>
+                    </div>
+                </div>
+                
+                <!-- Selected Candidate Details -->
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-user-circle me-2"></i>Selected Candidate</h5>
+                        <div id="selected-candidate-details">
+                            <div class="text-center mb-4">
+                                <div class="avatar mx-auto mb-3" id="selected-avatar">MR</div>
+                                <h5 id="selected-name">Select a candidate</h5>
+                                <p class="text-muted">Click on any candidate to view details</p>
+                            </div>
+                        </div>
+                        
+                        <!-- AI Evaluation Section -->
+                        <div class="mt-4 pt-4 border-top">
+                            <h6><i class="fas fa-robot me-2"></i>AI Evaluation</h6>
+                            <div id="ai-evaluation-status" class="small text-muted mb-2">API Status: Checking...</div>
+                            <div class="mb-3">
+                                <small class="d-block mb-1">Crisis Management (40%)</small>
+                                <div class="d-flex align-items-center">
+                                    <div class="skill-bar flex-grow-1 me-2">
+                                        <div class="crisis-bg" style="width: 0%" id="ai-crisis-bar"></div>
+                                    </div>
+                                    <span id="ai-crisis-score">-</span>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <small class="d-block mb-1">Sustainability (35%)</small>
+                                <div class="d-flex align-items-center">
+                                    <div class="skill-bar flex-grow-1 me-2">
+                                        <div class="sustainability-bg" style="width: 0%" id="ai-sustainability-bar"></div>
+                                    </div>
+                                    <span id="ai-sustainability-score">-</span>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <small class="d-block mb-1">Team Motivation (25%)</small>
+                                <div class="d-flex align-items-center">
+                                    <div class="skill-bar flex-grow-1 me-2">
+                                        <div class="team-bg" style="width: 0%" id="ai-team-bar"></div>
+                                    </div>
+                                    <span id="ai-team-score">-</span>
+                                </div>
+                            </div>
+                            <button class="btn btn-recycling w-100" onclick="evaluateCurrentCandidate()" id="evaluate-btn">
+                                <i class="fas fa-magic me-2"></i>Evaluate with AI
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap & Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // ==================== CONFIGURATION ====================
+        const CANDIDATES_COUNT = 40;
+        let candidates = [];
+        let selectedCandidate = null;
+        let apiKey = null;
+        let isApiAvailable = false;
+
+        // ==================== INITIALIZATION ====================
+        document.addEventListener('DOMContentLoaded', async function() {
+            // Set current date
+            const now = new Date();
+            document.getElementById('current-date').textContent = now.toLocaleDateString('en-US', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+
+            // Load API key from .env file
+            await loadApiKeyFromEnv();
+
+            // Generate sample candidates
+            generateCandidates();
+
+            // Calculate and update stats
+            updateStatistics();
+
+            // Populate UI
+            populateLeaderboard();
+            populateCandidatesGrid();
+            initializeCharts();
+
+            // Select first candidate by default
+            if (candidates.length > 0) {
+                selectCandidate(candidates[0]);
+            }
+
+            // Update API status
+            updateApiStatus();
+        });
+
+        // ==================== API KEY MANAGEMENT ====================
+        async function loadApiKeyFromEnv() {
+            try {
+                // Try to fetch .env file
+                const response = await fetch('.env');
+                if (!response.ok) {
+                    console.log('No .env file found');
+                    return;
+                }
+
+                const envContent = await response.text();
+                
+                // Look for API key in .env file
+                const lines = envContent.split('\n');
+                for (const line of lines) {
+                    // Check for OPENAI_API_KEY or GITHUB_COPILOT_TOKEN
+                    if (line.includes('OPENAI_API_KEY=')) {
+                        apiKey = line.split('OPENAI_API_KEY=')[1]?.trim();
+                        break;
+                    } else if (line.includes('GITHUB_COPILOT_TOKEN=')) {
+                        apiKey = line.split('GITHUB_COPILOT_TOKEN=')[1]?.trim();
+                        break;
+                    }
+                }
+
+                if (apiKey) {
+                    console.log('✅ API key loaded from .env file');
+                    isApiAvailable = true;
+                } else {
+                    console.log('❌ No API key found in .env file');
+                }
+
+            } catch (error) {
+                console.log('⚠️ Could not read .env file:', error.message);
+            }
+        }
+
+        function updateApiStatus() {
+            const statusBadge = document.getElementById('api-status-badge');
+            const statusText = document.getElementById('ai-evaluation-status');
+            
+            if (isApiAvailable && apiKey) {
+                statusBadge.className = 'badge bg-success api-status me-3';
+                statusBadge.innerHTML = '<i class="fas fa-circle me-1"></i>API Connected';
+                statusText.textContent = 'API Status: Connected (Key loaded from .env)';
+            } else {
+                statusBadge.className = 'badge bg-warning api-status me-3';
+                statusBadge.innerHTML = '<i class="fas fa-circle me-1"></i>Mock Mode';
+                statusText.textContent = 'API Status: Using mock data (No API key found)';
+            }
+        }
+
+        // ==================== AI EVALUATION ====================
+        async function evaluateCurrentCandidate() {
+            if (!selectedCandidate) {
+                showNotification('Please select a candidate first', 'warning');
+                return;
+            }
+
+            const button = document.getElementById('evaluate-btn');
+            const originalText = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Evaluating...';
+            button.disabled = true;
+
+            try {
+                if (isApiAvailable && apiKey) {
+                    // Use real OpenAI API
+                    await evaluateWithOpenAI();
+                } else {
+                    // Use mock evaluation
+                    await evaluateWithMock();
+                }
+            } catch (error) {
+                console.error('Evaluation error:', error);
+                showNotification('Evaluation failed: ' + error.message, 'danger');
+                await evaluateWithMock();
+            } finally {
+                button.innerHTML = originalText;
+                button.disabled = false;
+            }
+        }
+
+        async function evaluateWithOpenAI() {
+            showNotification('Starting AI evaluation with OpenAI...', 'info');
+            
+            // Prepare the prompt
+            const prompt = `Evaluate this recycling production line manager candidate:
+
+Candidate: ${selectedCandidate.name}
+Experience: ${selectedCandidate.experience} years
+Skills: ${selectedCandidate.skills}
+
+Please evaluate on three criteria:
+1. Crisis Management (0-10): Ability to handle emergencies and safety incidents
+2. Sustainability Knowledge (0-10): Understanding of recycling processes and environmental regulations
+3. Team Motivation (0-10): Leadership and team management skills
+
+Return ONLY a JSON object with this structure:
+{
+  "crisis_management": {"score": number, "reason": "string"},
+  "sustainability": {"score": number, "reason": "string"},
+  "team_motivation": {"score": number, "reason": "string"}
+}`;
+
+            try {
+                const response = await fetch('https://api.openai.com/v1/chat/completions', {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${apiKey}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        model: 'gpt-3.5-turbo',
+                        messages: [
+                            {
+                                role: 'system',
+                                content: 'You are an expert evaluator for recycling plant managers. Always return valid JSON.'
+                            },
+                            {
+                                role: 'user',
+                                content: prompt
+                            }
+                        ],
+                        temperature: 0.3,
+                        max_tokens: 500
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`API error: ${response.status}`);
+                }
+
+                const data = await response.json();
+                const aiResponse = data.choices[0]?.message?.content;
+                
+                try {
+                    const evaluation = JSON.parse(aiResponse);
+                    updateAIResults(evaluation);
+                    showNotification('AI evaluation completed successfully!', 'success');
+                    
+                    // Update candidate scores
+                    if (evaluation.crisis_management?.score && 
+                        evaluation.sustainability?.score && 
+                        evaluation.team_motivation?.score) {
+                        
+                        selectedCandidate.crisis = parseFloat(evaluation.crisis_management.score);
+                        selectedCandidate.sustainability = parseFloat(evaluation.sustainability.score);
+                        selectedCandidate.team = parseFloat(evaluation.team_motivation.score);
+                        selectedCandidate.total = calculateTotalScore(selectedCandidate);
+                        
+                        // Update UI
+                        populateLeaderboard();
+                        showNotification('Candidate scores updated!', 'success');
+                    }
+                    
+                } catch (parseError) {
+                    console.error('Failed to parse AI response:', parseError);
+                    showNotification('Using mock data (AI response format error)', 'warning');
+                    await evaluateWithMock();
+                }
+
+            } catch (error) {
+                console.error('OpenAI API error:', error);
+                showNotification('API call failed, using mock data', 'warning');
+                await evaluateWithMock();
+            }
+        }
+
+        async function evaluateWithMock() {
+            showNotification('Using mock AI evaluation...', 'info');
+            
+            // Simulate API delay
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            
+            // Generate realistic mock scores based on experience
+            const baseScore = Math.min(5 + (selectedCandidate.experience * 0.2), 9.5);
+            
+            const mockEvaluation = {
+                crisis_management: {
+                    score: (baseScore + (Math.random() - 0.5)).toFixed(1),
+                    reason: "Based on experience with industrial safety protocols"
+                },
+                sustainability: {
+                    score: (baseScore + (Math.random() - 0.3)).toFixed(1),
+                    reason: "Demonstrated knowledge in recycling processes"
+                },
+                team_motivation: {
+                    score: (baseScore + (Math.random() - 0.4)).toFixed(1),
+                    reason: "Shows good leadership potential"
+                }
+            };
+            
+            updateAIResults(mockEvaluation);
+            showNotification('Mock evaluation completed', 'info');
+        }
+
+        function updateAIResults(evaluation) {
+            // Update progress bars and scores
+            if (evaluation.crisis_management?.score) {
+                const score = parseFloat(evaluation.crisis_management.score);
+                document.getElementById('ai-crisis-bar').style.width = `${score * 10}%`;
+                document.getElementById('ai-crisis-score').textContent = score.toFixed(1);
+            }
+            
+            if (evaluation.sustainability?.score) {
+                const score = parseFloat(evaluation.sustainability.score);
+                document.getElementById('ai-sustainability-bar').style.width = `${score * 10}%`;
+                document.getElementById('ai-sustainability-score').textContent = score.toFixed(1);
+            }
+            
+            if (evaluation.team_motivation?.score) {
+                const score = parseFloat(evaluation.team_motivation.score);
+                document.getElementById('ai-team-bar').style.width = `${score * 10}%`;
+                document.getElementById('ai-team-score').textContent = score.toFixed(1);
+            }
+            
+            // Show reasons if available
+            if (evaluation.crisis_management?.reason) {
+                console.log('Crisis Management:', evaluation.crisis_management.reason);
+            }
+        }
+
+        // ==================== CANDIDATE MANAGEMENT ====================
+        function generateCandidates() {
+            const names = [
+                "Maria Rodriguez", "Sarah Johnson", "Alex Chen", "David Miller", "Robert Kim",
+                "Lisa Wang", "James Wilson", "Emma Thompson", "Michael Brown", "Jennifer Lee",
+                "Carlos Garcia", "Amanda White", "Thomas Clark", "Olivia Martin", "William Taylor",
+                "Sophia Anderson", "Daniel Moore", "Isabella Jackson", "Matthew Harris", "Emily Lewis"
+            ];
+            
+            const surnames = [
+                "Smith", "Johnson", "Williams", "Brown", "Jones", "Garcia", "Miller", "Davis",
+                "Rodriguez", "Martinez", "Hernandez", "Lopez", "Gonzalez", "Wilson", "Anderson"
+            ];
+            
+            const skills = [
+                "Lean Manufacturing", "Six Sigma", "ERP Systems", "Process Optimization",
+                "Team Leadership", "Project Management", "ISO 14001", "OSHA Compliance",
+                "Quality Control", "Supply Chain", "Sustainability", "Waste Reduction",
+                "Safety Protocols", "Automation", "Data Analysis", "Training & Development"
+            ];
+            
+            const locations = ["New York", "Chicago", "Houston", "Phoenix", "Philadelphia", 
+                             "San Antonio", "San Diego", "Dallas", "San Jose", "Austin"];
+            
+            candidates = [];
+            
+            for (let i = 0; i < CANDIDATES_COUNT; i++) {
+                const firstName = names[i % names.length];
+                const lastName = surnames[Math.floor(Math.random() * surnames.length)];
+                const name = `${firstName} ${lastName}`;
+                const experience = 3 + Math.floor(Math.random() * 17); // 3-20 years
+                
+                // Generate random skills (3-5 skills)
+                const numSkills = 3 + Math.floor(Math.random() * 3);
+                const candidateSkills = [];
+                for (let j = 0; j < numSkills; j++) {
+                    const skill = skills[Math.floor(Math.random() * skills.length)];
+                    if (!candidateSkills.includes(skill)) {
+                        candidateSkills.push(skill);
+                    }
+                }
+                
+                // Generate scores (higher scores for more experience)
+                const baseScore = Math.min(5 + (experience * 0.2), 9.5);
+                const crisis = parseFloat((baseScore + (Math.random() - 0.5)).toFixed(1));
+                const sustainability = parseFloat((baseScore + (Math.random() - 0.3)).toFixed(1));
+                const team = parseFloat((baseScore + (Math.random() - 0.4)).toFixed(1));
+                const total = calculateTotalScore({crisis, sustainability, team});
+                
+                candidates.push({
+                    id: i + 1,
+                    name: name,
+                    experience: experience,
+                    skills: candidateSkills.join(', '),
+                    crisis: crisis,
+                    sustainability: sustainability,
+                    team: team,
+                    total: total,
+                    location: locations[Math.floor(Math.random() * locations.length)],
+                    education: ["High School", "Bachelor's", "Master's", "PhD"][Math.floor(Math.random() * 4)],
+                    email: `${name.toLowerCase().replace(' ', '.')}@example.com`
+                });
+            }
+            
+            // Sort by total score for ranking
+            candidates.sort((a, b) => b.total - a.total);
+            candidates.forEach((c, i) => c.rank = i + 1);
+        }
+
+        function calculateTotalScore(candidate) {
+            return parseFloat((
+                candidate.crisis * 0.4 +
+                candidate.sustainability * 0.35 +
+                candidate.team * 0.25
+            ).toFixed(2));
+        }
+
+        // ==================== UI FUNCTIONS ====================
+        function selectCandidate(candidate) {
+            selectedCandidate = candidate;
+            
+            // Update selected candidate details
+            document.getElementById('selected-avatar').textContent = getInitials(candidate.name);
+            document.getElementById('selected-name').textContent = candidate.name;
+            
+            const detailsDiv = document.getElementById('selected-candidate-details');
+            detailsDiv.innerHTML = `
+                <div class="text-center mb-4">
+                    <div class="avatar mx-auto mb-3">${getInitials(candidate.name)}</div>
+                    <h5>${candidate.name}</h5>
+                    <div class="badge ${candidate.rank <= 3 ? 'bg-warning' : 'bg-primary'} mb-2">Rank #${candidate.rank}</div>
+                    <p class="text-muted mb-2">${candidate.experience} years experience</p>
+                    <div class="badge bg-success fs-6 mb-3">${candidate.total.toFixed(1)}/10</div>
+                </div>
+                <div class="mb-3">
+                    <p><i class="fas fa-graduation-cap me-2"></i><strong>Education:</strong> ${candidate.education}</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i><strong>Location:</strong> ${candidate.location}</p>
+                    <p><i class="fas fa-envelope me-2"></i><strong>Email:</strong> ${candidate.email}</p>
+                </div>
+                <div>
+                    <h6>Skills:</h6>
+                    <div class="d-flex flex-wrap gap-1">
+                        ${candidate.skills.split(', ').map(skill => 
+                            `<span class="badge bg-light text-dark">${skill}</span>`
+                        ).join('')}
+                    </div>
+                </div>
+            `;
+            
+            // Update AI evaluation bars with current scores
+            document.getElementById('ai-crisis-bar').style.width = `${candidate.crisis * 10}%`;
+            document.getElementById('ai-sustainability-bar').style.width = `${candidate.sustainability * 10}%`;
+            document.getElementById('ai-team-bar').style.width = `${candidate.team * 10}%`;
+            
+            document.getElementById('ai-crisis-score').textContent = candidate.crisis.toFixed(1);
+            document.getElementById('ai-sustainability-score').textContent = candidate.sustainability.toFixed(1);
+            document.getElementById('ai-team-score').textContent = candidate.team.toFixed(1);
+        }
+
+        function populateLeaderboard() {
+            const tbody = document.getElementById('leaderboard-body');
+            tbody.innerHTML = '';
+            
+            // Show top 10
+            const top10 = candidates.slice(0, 10);
+            
+            top10.forEach(candidate => {
+                const row = document.createElement('tr');
+                row.style.cursor = 'pointer';
+                row.onclick = () => selectCandidate(candidate);
+                
+                row.innerHTML = `
+                    <td>
+                        <div class="rank-badge ${candidate.rank <= 3 ? `rank-${candidate.rank}` : 'rank-other'}">
+                            ${candidate.rank}
+                        </div>
+                    </td>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <div class="avatar me-3">${getInitials(candidate.name)}</div>
+                            <div>
+                                <strong>${candidate.name}</strong><br>
+                                <small class="text-muted">${candidate.experience} yrs • ${candidate.location}</small>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="badge bg-primary fs-6">${candidate.total.toFixed(1)}</div>
+                    </td>
+                    <td>${candidate.experience} years</td>
+                    <td>
+                        <small>${candidate.skills.split(',')[0]}</small>
+                    </td>
+                `;
+                
+                tbody.appendChild(row);
+            });
+        }
+
+        function populateCandidatesGrid() {
+            const grid = document.getElementById('candidates-grid');
+            grid.innerHTML = '';
+            
+            // Show first 12 candidates
+            const first12 = candidates.slice(0, 12);
+            
+            first12.forEach(candidate => {
+                const col = document.createElement('div');
+                col.className = 'col-md-6 col-lg-4 mb-3';
+                
+                col.innerHTML = `
+                    <div class="candidate-card card h-100" onclick="selectCandidate(${candidate.id})">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div class="avatar">${getInitials(candidate.name)}</div>
+                                <div class="rank-badge ${candidate.rank <= 3 ? `rank-${candidate.rank}` : 'rank-other'}">
+                                    ${candidate.rank}
+                                </div>
+                            </div>
+                            <h6 class="card-title">${candidate.name}</h6>
+                            <p class="text-muted small mb-2">
+                                <i class="fas fa-briefcase me-1"></i>${candidate.experience} years
+                            </p>
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between small mb-1">
+                                    <span>Crisis</span>
+                                    <span>${candidate.crisis.toFixed(1)}</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="crisis-bg" style="width: ${candidate.crisis * 10}%"></div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between small mb-1 mt-2">
+                                    <span>Sustainability</span>
+                                    <span>${candidate.sustainability.toFixed(1)}</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="sustainability-bg" style="width: ${candidate.sustainability * 10}%"></div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between small mb-1 mt-2">
+                                    <span>Team</span>
+                                    <span>${candidate.team.toFixed(1)}</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="team-bg" style="width: ${candidate.team * 10}%"></div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-light text-dark">${candidate.total.toFixed(1)}/10</span>
+                                <small class="text-muted">${candidate.skills.split(',')[0]}</small>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                grid.appendChild(col);
+            });
+        }
+
+        function updateStatistics() {
+            const totalCandidates = candidates.length;
+            const avgScore = (candidates.reduce((sum, c) => sum + c.total, 0) / totalCandidates).toFixed(1);
+            const topScore = Math.max(...candidates.map(c => c.total)).toFixed(1);
+            const avgExp = (candidates.reduce((sum, c) => sum + c.experience, 0) / totalCandidates).toFixed(1);
+
+            // Update stats
+            document.getElementById('total-candidates').textContent = totalCandidates;
+            document.getElementById('avg-score').textContent = avgScore;
+            document.getElementById('top-score').textContent = topScore;
+            document.getElementById('avg-experience').textContent = avgExp + 'y';
+
+            // Update top performer
+            const topPerformer = candidates[0];
+            document.getElementById('top-performer-name').textContent = topPerformer.name;
+            document.getElementById('top-performer-score').textContent = topPerformer.total.toFixed(1) + '/10';
+            document.getElementById('top-performer-skills').textContent = topPerformer.skills.split(',')[0];
+        }
+
+        function getInitials(name) {
+            return name.split(' ')
+                .map(word => word[0])
+                .join('')
+                .toUpperCase()
+                .substring(0, 2);
+        }
+
+        // ==================== CHARTS ====================
+        function initializeCharts() {
+            // Score Distribution Chart
+            const scoreRanges = {
+                '8-10': candidates.filter(c => c.total >= 8).length,
+                '7-8': candidates.filter(c => c.total >= 7 && c.total < 8).length,
+                '6-7': candidates.filter(c => c.total >= 6 && c.total < 7).length,
+                '5-6': candidates.filter(c => c.total >= 5 && c.total < 6).length,
+                'Below 5': candidates.filter(c => c.total < 5).length
+            };
+            
+            const scoreCtx = document.getElementById('scoreChart').getContext('2d');
+            new Chart(scoreCtx, {
+                type: 'bar',
+                data: {
+                    labels: Object.keys(scoreRanges),
+                    datasets: [{
+                        label: 'Number of Candidates',
+                        data: Object.values(scoreRanges),
+                        backgroundColor: [
+                            'rgba(34, 197, 94, 0.7)',
+                            'rgba(134, 239, 172, 0.7)',
+                            'rgba(253, 224, 71, 0.7)',
+                            'rgba(249, 115, 22, 0.7)',
+                            'rgba(239, 68, 68, 0.7)'
+                        ],
+                        borderColor: [
+                            'rgb(34, 197, 94)',
+                            'rgb(134, 239, 172)',
+                            'rgb(253, 224, 71)',
+                            'rgb(249, 115, 22)',
+                            'rgb(239, 68, 68)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                stepSize: 5
+                            }
+                        }
+                    }
+                }
+            });
+            
+            // Skill Composition Chart
+            const skillCtx = document.getElementById('skillChart').getContext('2d');
+            new Chart(skillCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Crisis Management', 'Sustainability', 'Team Motivation'],
+                    datasets: [{
+                        data: [
+                            candidates.reduce((sum, c) => sum + c.crisis, 0) / candidates.length,
+                            candidates.reduce((sum, c) => sum + c.sustainability, 0) / candidates.length,
+                            candidates.reduce((sum, c) => sum + c.team, 0) / candidates.length
+                        ],
+                        backgroundColor: [
+                            'rgba(249, 115, 22, 0.8)',
+                            'rgba(34, 197, 94, 0.8)',
+                            'rgba(59, 130, 246, 0.8)'
+                        ],
+                        borderColor: [
+                            'rgb(249, 115, 22)',
+                            'rgb(34, 197, 94)',
+                            'rgb(59, 130, 246)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+        }
+
+        // ==================== UTILITY FUNCTIONS ====================
+        function showNotification(message, type) {
+            const alertClass = type === 'success' ? 'alert-success' : 
+                             type === 'warning' ? 'alert-warning' : 
+                             type === 'danger' ? 'alert-danger' : 'alert-info';
+            
+            const alert = document.createElement('div');
+            alert.className = `alert ${alertClass} alert-dismissible fade show position-fixed`;
+            alert.style.cssText = 'top: 20px; right: 20px; z-index: 9999; min-width: 300px;';
+            alert.innerHTML = `
+                ${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            `;
+            
+            document.body.appendChild(alert);
+            
+            setTimeout(() => {
+                alert.remove();
+            }, 5000);
+        }
+
+        async function runAIEvaluation() {
+            if (isApiAvailable && apiKey) {
+                showNotification('Starting batch AI evaluation of top candidates...', 'info');
+                
+                // Evaluate top 3 candidates
+                const topCandidates = candidates.slice(0, 3);
+                let completed = 0;
+                
+                for (const candidate of topCandidates) {
+                    selectedCandidate = candidate;
+                    await evaluateCurrentCandidate();
+                    completed++;
+                    
+                    // Delay between evaluations
+                    await new Promise(resolve => setTimeout(resolve, 2000));
+                }
+                
+                showNotification(`AI evaluation completed for ${completed} candidates!`, 'success');
+                populateLeaderboard(); // Refresh with new scores
+                
+            } else {
+                showNotification('No API key found. Please add your API key to .env file.', 'warning');
+            }
+        }
+    </script>
+</body>
+</html>
